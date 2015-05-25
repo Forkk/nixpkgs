@@ -2558,6 +2558,8 @@ let self = _self // overrides; _self = with self; {
   };
 
   DBIxClass = buildPerlPackage {
+    # Temporarily disabled due to issue #6837
+    doCheck = false;
     name = "DBIx-Class-0.082801";
     src = fetchurl {
       url = mirror://cpan/authors/id/R/RI/RIBASUSHI/DBIx-Class-0.082801.tar.gz;
